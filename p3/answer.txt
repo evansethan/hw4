@@ -1,0 +1,3 @@
+for_each takes in the functor by value, creating a copy to operate on. max_len updates in the copy, not the original. When we print the original, it's just the default max_len, which is 0.
+
+for_each() returns the copied (and modified) object, so we can simply assign the result back to our original 'maxf' object to fix the problem.

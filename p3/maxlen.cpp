@@ -15,9 +15,9 @@ struct maxlenftn {
 int main() {
     vector<string> names{"Smith", "Jones", "Johnson", "Grant"};
     maxlenftn maxf;
-    maxf = for_each(names.begin(), names.end(), maxf); // pass-by value, need to update maxf in main
 
-    // EXPLAIN HERE
+    // pass-by value, need to update maxf (see answer.txt)
+    maxf = for_each(names.begin(), names.end(), maxf);
     cout << maxf.maxlen << endl;
     return 0;
 }

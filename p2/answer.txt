@@ -1,0 +1,32 @@
+While the runtimes varied, the versions with direct 2x2 determinant methods ran about twice as fast across all three programs. 
+
+It seems as if it doesn't matter if the methods are specialized or overloaded, the runtime is still signifiantly shortened.
+
+It also shows how creating a 2x2 simplified "base case" in addition to the existing 1x1 reduces the determinant calculation runtime, since much of higher-order determinant calculations still involve lots of 2x2 determinant calculations.
+
+Run 1:
+    Matrix:
+        Before 2x2: 76.6021 seconds
+        After 2x2: 29.3388 seconds
+
+    OverloadMatrix:
+        Before 2x2: 69.6712 seconds
+        After 2x2: 35.7176 seconds
+
+    PSMatrix:
+        Before 2x2: 70.794 seconds
+        After 2x2: 29.748 seconds
+
+
+Run 2: 
+    Matrix:
+        Before 2x2: 49.046 seconds
+        After 2x2: 29.9214 seconds
+
+    OverloadMatrix:
+        Before 2x2: 58.3243 seconds
+        After 2x2: 34.6758 seconds
+
+    PSMatrix:
+        Before 2x2: 55.1245 seconds
+        After 2x2: 30.2559 seconds
