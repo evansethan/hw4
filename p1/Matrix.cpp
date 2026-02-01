@@ -4,18 +4,43 @@
 using namespace mpcs51044;
 using namespace std;
 
+// Main function for testing Matrix addition
 int main()
 {
-	auto start = chrono::system_clock::now();
 	Matrix<3, 3> m = { 
 			{ 1, 2, 3, }, 
 			{ 4, 5, 6, }, 
 			{ 7, 8, 9, } 
 	};
-	static double total;
-	for (int i = 0; i < 100'000'000; i++) {
-		m(1, 1) = i;
-		total += m.determinant();
-	}
-	cout << chrono::duration<double>(chrono::system_clock::now() - start).count() << " seconds\n";
+    Matrix<3, 3> n = { 
+			{ 1, 2, 3, }, 
+			{ 4, 5, 6, }, 
+			{ 7, 8, 9, }
+	};
+    Matrix<3, 3> x = m + n;
+
+    cout << x;
+
+    x += m;
+
+    cout << x;
+
+    Matrix<4, 4> y = { 
+			{ 1, 2, 3, 4}, 
+			{ 4, 5, 6, 4}, 
+			{ 7, 8, 9, 4},
+            { 7, 8, 9, 4}
+	};
+
+     Matrix<4, 4> z = { 
+			{ 1, 2, 3, 4}, 
+			{ 4, 5, 6, 4}, 
+			{ 7, 8, 9, 4},
+            { 7, 8, 9, 4}
+	};
+
+    cout << y+z;
+
+    //cout << x += y; // should err out
+
 }
