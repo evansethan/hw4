@@ -1,0 +1,11 @@
+Matrix:
+    Before 2x2: 76.6021 seconds
+    After 2x2: 29.3388 seconds
+
+OverloadMatrix:
+    Before 2x2: 69.6712 seconds
+    After 2x2: 35.7176 seconds
+
+PSMatrix:
+    Before 2x2: 70.794 seconds
+    After 2x2: 29.748 seconds

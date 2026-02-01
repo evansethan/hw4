@@ -12,6 +12,7 @@ int main()
 			{ 4, 5, 6, },
 			{ 7, 8, 9, }
 	};
+    cout << m.determinant() << endl;
 	static double total;
 	for (int i = 0; i < 100'000'000; i++) {
 		m(1, 1) = i;

@@ -13,6 +13,7 @@ int main()
 			{ 7, 8, 9, }
 	};
 	static double total;
+    cout << m.determinant() << endl;
 	for (int i = 0; i < 100'000'000; i++) {
 		m(1, 1) = i;
 		total += m.determinant();

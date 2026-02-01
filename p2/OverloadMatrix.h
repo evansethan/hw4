@@ -103,7 +103,7 @@ determinantImpl(const Matrix<T, h, w> &m)
 {
 	T val = 0;
 	for (int i = 0; i < h; i++) {
-		val = (i % 2 ? -1 : 1) * m(i, 0) * m.minor(i, 0).determinant();
+		val += (i % 2 ? -1 : 1) * m(i, 0) * m.minor(i, 0).determinant(); // corrected
 	}
 	return val;
 }
@@ -113,6 +113,13 @@ T
 determinantImpl(const Matrix<T, 1, 1> &m)
 {
 	return m(0, 0);
+}
+
+template<floating_point T>
+T
+determinantImpl(const Matrix<T, 2, 2> &m)
+{
+	return m(0,0) * m(1,1) - m(1,0) * m(0,1);
 }
 
 template<floating_point T, int h, int w>
